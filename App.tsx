@@ -67,7 +67,7 @@ export default function App() {
   let [potablity, setPotablity] = React.useState(false);
 
   let onchangetext = (key, value) => {
-    setValues({ ...values, [key]: value });
+    setValues({ ...values, [key]: value == '' ? null : value });
     validatePotablity();
   };
 
